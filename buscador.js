@@ -14,11 +14,14 @@ $(document).ready(function() {
 		main.empty();
 		
 		function addResult(result){
-			console.log(result.url)
-			console.log(window.location.pathname.split('/'))
-			console.log(host)
-			var temp =
-			main.append('<p><a href="http://'+host+'/'+result.url+'">' + result.title + '</a></p>');
+			var url = window.location.host;
+			var listado = window.location.pathname.split('/')
+			for (var i = 0; i<listado.length; i++){
+				if (listado[i].length > 0 && !listado[i].includes('.html')) {
+					url += "/"+ listado[i]
+				}
+			}
+			main.append('<p><a href="http://'+url+'/'+result.url+'">' + result.title + '</a></p>');
 		}
 		
 		pags.forEach(function (pag){
