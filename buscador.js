@@ -15,9 +15,7 @@ $(document).ready(function() {
 		
 		function addResult(result){
 			console.log(result.url)
-			var url = window.location.origin;
-			var host = window.location.host;
-			console.log(url)
+			console.log(window.location.pathname.split('/'))
 			console.log(host)
 			var temp =
 			main.append('<p><a href="http://'+host+'/'+result.url+'">' + result.title + '</a></p>');
