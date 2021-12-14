@@ -58,6 +58,10 @@ main ol {
     color: #000000;
     background-color: rgba(123, 123, 123, 0);
     text-align: left;
+    
+}
+li p{
+    font-size: 28px;
 }
 main section {
     display: grid;
