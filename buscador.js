@@ -14,9 +14,9 @@ $(document).ready(function() {
 		main.empty();
 		
 		function addResult(result){
-			console.log(result.url)
-			var temp =
-			main.append('<p><a href="http://156.35.98.100:82/'+result.url+'">' + result.title + '</a></p>');
+			var host = window.location.host;
+
+			var temp = main.append('<p><a href="http://'+host+'/'+result.url+'">' + result.title + '</a></p>');
 		}
 		
 		pags.forEach(function (pag){
