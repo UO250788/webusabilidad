@@ -14,9 +14,13 @@ $(document).ready(function() {
 		main.empty();
 		
 		function addResult(result){
+			console.log(result.url)
+			var url = window.location.origin;
 			var host = window.location.host;
-
-			var temp = main.append('<p><a href="http://'+host+'/'+result.url+'">' + result.title + '</a></p>');
+			console.log(url)
+			console.log(host)
+			var temp =
+			main.append('<p><a href="http://'+host+'/'+result.url+'">' + result.title + '</a></p>');
 		}
 		
 		pags.forEach(function (pag){
